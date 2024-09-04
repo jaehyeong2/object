@@ -2,18 +2,28 @@ package jjfactory.`object`.ticket_my
 
 class Audience(
     val name: String,
-    var bag: Bag
+    private var bag: Bag
 ) {
 
-    fun hasInvitation(): Boolean {
+    private fun hasInvitation(): Boolean {
         return bag.hasInvitation()
     }
 
-    fun setTicket(ticket: Ticket) {
+    private fun setTicket(ticket: Ticket) {
         bag.setTicket(ticket)
     }
 
-    fun decreaseAmount(amount: Long){
+    private fun decreaseAmount(amount: Long){
         bag.decreaseAmount(amount)
+    }
+
+    fun buy(ticket: Ticket): Long {
+        return if (hasInvitation()){
+            setTicket(ticket)
+            0L
+        }else {
+            decreaseAmount(ticket.fee)
+            ticket.fee
+        }
     }
 }

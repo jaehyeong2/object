@@ -1,14 +1,11 @@
 package jjfactory.`object`.ticket_my
 
 class TicketSeller(
-    val ticketOffice: TicketOffice
+    private val ticketOffice: TicketOffice
 ) {
-
-    fun getTicket(): Ticket {
-        return ticketOffice.getTicket()
-    }
-
-    fun increaseAmount(amount: Long) {
-        ticketOffice.increaseAmount(amount)
+    fun sellTo(audience: Audience){
+        ticketOffice.increaseAmount(
+            amount = audience.buy(ticket = ticketOffice.getTicket())
+        )
     }
 }

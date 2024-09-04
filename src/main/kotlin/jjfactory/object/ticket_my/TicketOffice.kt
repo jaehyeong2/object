@@ -12,8 +12,4 @@ class TicketOffice(
     fun increaseAmount(amount: Long){
         this.amount  += amount
     }
-
-    fun decreaseAmount(amount: Long){
-        this.amount  -= amount
-    }
 }
