@@ -1,11 +1,11 @@
-package jjfactory.`object`.ch1_ticket_start
+package jjfactory.`object`.ticket_start
 
-class TicketOffice(
+class TicketOffice_Init(
     private var amount: Long,
-    private val tickets: MutableList<Ticket> = mutableListOf()
+    private val tickets: MutableList<Ticket_Init> = mutableListOf()
 ) {
 
-    fun getTicket(): Ticket {
+    fun getTicket(): Ticket_Init {
         return tickets.removeAt(0)
     }
 

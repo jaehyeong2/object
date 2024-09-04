@@ -1,9 +1,9 @@
-package jjfactory.`object`.ch1_ticket_start
+package jjfactory.`object`.ticket_my
 
 class Bag(
     var amount: Long,
     val invitation: Invitation?,
-    var ticket: Ticket?
+    private var ticket: Ticket?
 ) {
 
     fun hasInvitation(): Boolean {
@@ -20,5 +20,9 @@ class Bag(
 
     fun decreaseAmount(amount: Long){
         this.amount  -= amount
+    }
+
+    fun setTicket(ticket: Ticket){
+        this.ticket = ticket
     }
 }

@@ -1,8 +1,8 @@
-package jjfactory.`object`.ch1_ticket_start
+package jjfactory.`object`.ticket_start
 
 import java.time.LocalDateTime
 
-class Invitation(
+class Invitation_Init(
     val createdAt: LocalDateTime
 ) {
 }

@@ -1,10 +1,10 @@
-package jjfactory.`object`.ch1_ticket_start
+package jjfactory.`object`.ticket_start
 
-class Theater(
-    private val ticketSeller: TicketSeller
+class Theater_Init(
+    private val ticketSeller: TicketSeller_Init
 ) {
 
-    fun enter(audience: Audience){
+    fun enter(audience: Audience_Init){
         if(audience.bag.hasInvitation()){
             val ticket = ticketSeller.ticketOffice.getTicket()
             audience.bag.ticket = ticket
